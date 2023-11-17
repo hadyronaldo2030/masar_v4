@@ -1,0 +1,322 @@
+/*----------------------------------------
+Project:	System Masar Marketing
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Home
+
+
+
+
+/*==============================
+	Home
+==============================*/
+header{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-height: 87vh;
+    height: 87vh;
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+/* Title Section */
+header .titleSection{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: #ab9696;
+    align-items: center;
+    margin: 6px 0;
+}
+
+
+/* View head */
+.viewHead{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Input */
+.form-select {
+    display: block;
+    width: 185px;
+    padding: 10px 0.75rem;
+    margin-right: 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color);
+    background-color: var(--component);
+    background-clip: padding-box;
+    border: 2px solid #79899924;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control{
+    display: block;
+    padding: 10px 0.75rem;
+    margin-right: 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color);
+    background-clip: padding-box;
+    background-color: transparent !important;
+    border: 2px solid #79899924 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 7px !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    &::placeholder {
+      opacity: 1;
+      outline: none;
+    }
+}
+input:focus {
+    border-color: #79899924 !important;
+    background-color: transparent;
+    box-shadow: 0 0 0 0.25rem rgba(13, 109, 253, 0) !important;
+    color: var(--color) !important;
+    /* border: 2px solid #79899924 !important; */
+    outline: none;
+  }
+/*==============================
+	Start Popup Window
+==============================*/
+.popupWindow {
+    height: 100%;
+    border-radius: 15px;
+    background: var(--component)!important;
+    display: flex;
+    color: var(--color) !important;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.modal-header {
+    border-bottom: 1px solid #dee2e617!important;
+
+}
+.closepopup{
+    color: var(--color)!important;
+    --webkit-filter: var(--imgDark);
+}
+.modal-footer{
+    border-top: 1px solid #dee2e617!important;
+}
+textarea{
+    min-height: 120px!important;
+    height: auto!important;
+}
+
+.boxform label {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background: var(--component)!important;
+    padding: 5px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  input:focus + label, input:valid + label {
+    background: var(--component) !important;
+    bottom: 30px;
+    left: 5;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 3px;
+  }
+/* Upload Invoic Image */
+.uploadImg, .uploadImgEdit{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    background: #3a3c48;
+}
+
+.uploadImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    border-radius: 7px;
+}
+.uploadImg input ,.uploadImgEdit input{
+    height: 100%;
+    position: relative;
+    opacity: 0;
+}
+.uploadImg span ,.uploadImgEdit span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--input);
+    color: var(--color);
+    border-radius: 10px !important;
+}
+
+/* Small image */
+.boxMinImg {
+    display: flex;
+    width: 275px;
+    overflow-x: auto;
+    margin-top: 13px;
+    border-radius: 5px;
+}
+.boxMinImg .minImg {
+    display: flex;
+    min-width: 50px;
+    height: 50px;
+    margin-right: 6px;
+    border-radius: 7px;
+    background: var(--input);
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.file-upload {
+    display: none;
+}
+.boxMinImg .minImg img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    border-radius: 7px;
+}
+/* .minImg img:empty {
+    display: none;
+  } */
+.minImg .delete-button {
+    display: none;
+}
+.minImg .delete-button {
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #00000082;
+    color: #DDD;
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.minImg .delete-button:hover {
+    opacity: 1;
+}
+
+.minImg img:visible + .delete-button {
+    display: flex;
+}
+
+
+.btnPrimary{
+    background: rgba(67, 28, 221, 0.874);
+    color: #EEE;
+}
+
+
+
+
+/* select2 */
+
+.select2-results ul{
+    background: var(--input);
+}
+.select2-dropdown {
+    border: transparent !important;
+    background-color: var(--bs-dark) !important;
+}
+.select2-results ul li{
+    justify-content: space-between;
+    padding: 8px;
+    display: flex;
+    height: 50px;
+}
+ul .form-control{
+    min-width: 230px;
+    border: transparent !important;
+}
+.select2-results ul li img{
+    width: 40px;
+    height: 40px;
+    border-radius: 35px;
+}
+.select2-result__image,.select2-result__meta{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    border: transparent !important;
+    background: var(--input);
+    border-radius: 4px;
+    padding: 0 !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: var(--color) !important;
+}
+.select2-container .select2-selection--single {
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+.select2-search--dropdown {
+    padding: 0 !important;
+    background: var(--component) !important;
+}
+.select2-result{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #00000017 !important;
+    transition: all .5s ease;
+    }
+
+
+    .select2-container--default .select2-selection--multiple .select2-selection__choice {
+        background: var(--bs-gray-600) !important;
+        color: #EEE !important;
+        border: 1px solid #aaa;
+    }
+    .select2-container--default .select2-selection--multiple ,.select2-container--default .select2-selection--single {
+        background-color: var(--input) !important;
+        border: transparent  !important;
+        border-radius: 4px  !important;
+        cursor: pointer !important;
+    }
+    .select2-container--default .select2-results__option[aria-selected=true] {
+        background-color: transparent !important;
+    }

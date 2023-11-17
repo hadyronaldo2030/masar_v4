@@ -1,0 +1,774 @@
+/*----------------------------------------
+Project:	System Masar Marketing
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Welcome
+
+
+
+
+/*============== Fonts ==============*/
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+  }
+/*================================== */
+
+
+/*==============================
+	Common styles
+==============================*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.btnGray{
+    background: var(--btnGray);
+    color: #eee;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+.btnGray:hover{
+    background: #30353fb4;
+    color: #EEE;
+}
+.btnPrimary{
+    background: rgba(67, 28, 221, 0.874);
+    color: #EEE;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+.btnPrimary:hover{
+    background: rgba(66, 12, 148, 0.706)28, 221, 0.874);
+    color: #EEE;
+}
+*:disabled ,button{
+    background-color: dimgrey;
+    color: #EEE;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: none;
+    opacity: 1;
+    cursor: no-drop;
+  }
+  .invalid-feedback{
+    display: block;
+    font-size: 12px;
+    padding: 5px 0 0 0 !important;
+    margin: 0 !important;
+    height: auto;
+    color: var(--invalid);
+}
+svg,a{cursor:pointer !important;}
+a {text-decoration: none;}
+ul{
+	margin: 0 !important;
+	list-style: none!important;
+}
+/* Custom Scroll */
+::-webkit-scrollbar {
+	width: 5px;
+	z-index:2000000
+  }
+::-webkit-scrollbar-track {
+	background: #f1f1f100;
+	z-index:2000000
+}
+::-webkit-scrollbar-thumb {
+	background: #130e4300;
+	border-radius: 50px;
+	min-height:350px;
+	z-index:2000000
+}
+/*==============================
+Theme Dark & light
+==============================*/
+:root{
+	--dark-light: #eee;
+    --light-dark: #292c34;
+	--color: rgb(28, 28, 28);
+	--color2: #EEE;
+    --cards: linear-gradient(60deg, #ffffff 0%, #f6e2e2 100%);
+    --input: #EEE;
+    --btnGray: #1f2937;
+    --invalid: rgb(254, 33, 33);
+    --component : #fff;
+    --imgDark: invert(0);
+    --imgLight: invert(1);
+    --boxshadow: 3px 3px 6px #00000049;
+}
+
+html[data-theme="lightMode"]{
+    --dark-light: #292c34;
+    --light-dark: #efefef;
+	--color: #EEE;
+	--color2: #1b242e;
+    --cards: linear-gradient(60deg, #29323c 0%, #404b56 100%);
+    --input: #3a3c48;
+    --btnGray: #394254;
+    --invalid: orange;
+    --component : #30353f;
+    --imgDark: invert(1);
+    --imgLight: invert(0);
+    --boxshadow: inset 2px 6px 13px #8a84cc47;
+}
+
+body {
+	background: var(--dark-light);
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: 'Raleway'
+}
+html{
+    height: 100vh;
+    overflow: hidden;
+}
+  .body{
+    width: 100%;
+    height: 95vh;
+    margin: 20px 15px;
+    overflow-y: auto;
+    border-radius: 15px;
+}
+
+/*==============================
+Navbar
+==============================*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    color: #EEE;
+    background: var(--component);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: var(--boxshadow);
+}
+/* user Nav */
+nav .userNav{
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+    color: var(--color);
+	/* position: relative; */
+}
+nav .boxuser{
+	display: inline-block;
+    background: #EEE;
+    color: var(--color);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+	overflow: hidden;
+	margin-right: 5px;
+	padding: 3px;
+    margin-left: 10px;
+}
+nav svg {
+	padding: 4px;
+}
+nav .boxuser img{
+    width: 35px;
+    border-radius: 10px;
+}
+/* Hover User */
+.dropdownUser{
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    display: flex;
+    background: var(--input);
+    color: var(--color) !important;
+    width: 116px;
+    border-radius: 7px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+.dropdownUser a{
+	transition: all .5s ease;
+	width: 100%;
+    text-align: start;
+    color: var(--color) !important;
+    padding: 5px 15px;
+}
+.dropdownUser a:hover{
+	background: #EEE;
+	color: #000;
+}
+
+/* logo Navbar */
+nav img{
+	cursor: pointer;
+	height: 35px;
+}
+
+nav .lang{
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+/* Hover Lang */
+.dropdownLang{
+    position: absolute;
+    top: 33px;
+    right: 15px;
+    display: flex;
+    background: #2c313b;
+    width: 116px;
+    border-radius: 7px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    top: 45px;
+    left: -6px;
+}
+.dropdownLang a{
+	transition: all .5s ease;
+	width: 100%;
+    text-align: end;
+    color: var(--color);
+    padding: 5px 15px;
+}
+.dropdownLang a:hover{
+	background: #EEE;
+	color: #000;
+}
+#fullscreenButton img{
+    filter: var(--imgDark);
+    height: 25px;
+    width: 25px;
+}
+.icon{
+    display: flex;
+    background-color: #7eb2ff00;
+    color: var(--color);
+    border-radius: 7px;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease;
+}
+.icon:hover{
+    color: #888888!important;
+}
+/*==============================
+	End Navbar
+==============================*/
+
+
+/*==============================
+	Aside
+==============================*/
+aside{
+    background: var(--component);
+    width: 22%;
+    min-height: 95vh;
+    max-height: 100%;
+    overflow-y: auto;
+    border-radius: 15px;
+    margin: 20px 3px 20px 15px;
+    box-shadow: var(--boxshadow);
+    transition: all .5s ease;
+}
+aside .boxheadSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95vh !important;
+}
+.footerSide{
+    width: 100%;
+    height: 50px;
+    display: inline-flex;
+    color: var(--color) !important;
+    border-top: 1px solid #74747436;
+    padding: 10px 0 !important;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerSide a{
+    font-size: 16px;
+    color: rgb(255 52 52) !important;
+}
+
+.toggleSlide{
+    width: 4%;
+}
+
+/* logo aside */
+aside .logoaside {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #efebeb36;
+}
+aside .logoaside img{
+    width: 140px;
+    filter: var(--imgLight);
+    -webkit-filter: var(--imgLight);
+}
+/* my img */
+aside .useraside{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color);
+}
+aside .useraside a{color: #8f8f8ff1;}
+aside .boxuser {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EEE;
+    border-radius: 60px;
+}
+/* Toggle box User */
+.toggleSlide .boxuser{
+    width: 40px;
+    height: 45px;
+}
+
+aside .boxuser img{
+    width: 80px;
+    height: 80px;
+    border: 3px solid #d2d2d2;
+    border-radius: 60px;
+}
+/* Toggle img */
+.toggleSlide .boxuser img{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+aside .useraside h5{
+    margin: 10px 0 0 0 !important;
+}
+.toggleSlide .useraside h5{
+    font-size: 14px;
+}
+aside .boxuser span{
+    color: #9ba5ca!important;
+    font-size: 16px!important;
+    font-weight: 400px!important;
+}
+/* HR */
+aside section{
+    width: 100%;
+}
+aside section button{
+    width: 95%;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px!important;
+    font-size: 18px;
+    margin: auto;
+}
+
+aside .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #35363c00;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 0.25rem;
+    align-items: flex-end;
+}
+aside .card a{
+    padding: 10px;
+    margin-bottom: 6px;
+    color: var(--color);
+    background: var(--input);
+    width: 100%;
+    text-align: end;
+    border-radius: 10px;
+    transition: all .5s ease;
+}
+aside .card a:hover{
+    color: #EEE;
+    background: #17171969;
+}
+/* Active */
+aside .card .active{
+    color: #EEE;
+    background: #1717194c!important;
+}
+/* Toggle section */
+.toggleSlide section button, .toggleSlide section div{
+    display: none !important;
+}
+.toggleSlide section span{
+    display: flex;
+    font-size: 12px;
+    margin: 0 -7px;
+    width: 45px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+/*==============================
+	End Aside
+==============================*/
+
+
+/*==============================
+	chat Notes
+==============================*/
+#textareaChat{
+    position: absolute;
+    bottom: 0;
+    left: 17px;
+    width: 300px;
+    z-index: 1000;
+    background: #0a0c14;
+    color: #eee;
+    display: none;
+}
+#textareaChat .boxChat{
+    background-color: #EEE;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+}
+.titleChat{
+    padding: 7px 10px;
+    display: flex;
+    justify-content: space-between;
+    background: #0a0c14;
+    border-bottom: 1px solid #8a85ff17;
+}
+.boxChat textarea{
+    padding: 0 10px;
+    border: 1px solid #eeeeee00;
+    background: #0a0c14;
+    color: #eee;
+    outline: #00000000;
+}
+.boxChat #saveClose{
+    background: #0b5ed7;
+    color: #eee;
+}
+
+/*==============================
+	Loading
+==============================*/
+/* Loading */
+#loadingOverlay, .loadingOverlay{
+    width: 100%;
+    height: 100vh;
+    background: #292c34;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000000000;
+
+}
+.loading {
+    position: absolute;
+    top: 60%;
+    right: 32%;
+  }
+  .boxLogo{
+      position: absolute;
+      top: -260px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .boxLogo img{
+      width: 600px;
+
+  }
+  .centerBike {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 26px;
+    margin-left: -12px;
+  }
+
+  .center {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+  }
+
+  #loop {
+    height: 100px;
+    width: 100px;
+    border: #ffffff solid 6px;
+    border-radius: 200px;
+    position: relative;
+    right: 41%;
+    margin-bottom: 30px;
+    box-shadow: 3px 3px 13px #eee6;
+  }
+
+  #loop:before {
+    content: "GR";
+    position: absolute;
+    top: 40%;
+    left: -180px;
+    font-size: 100px;
+    transform: translateY(-50%);
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: url('../../assetsClinet/imgs/background1.jpg');
+    background-size: contain;
+    animation: flicker 1.5s infinite alternate;
+  }
+
+  #loop::after {
+    content: "UP";
+    position: absolute;
+    top: 40%;
+    left: 120%;
+    transform: translateY(-50%);
+    font-size: 100px;
+    color: white;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: url('../../assetsClinet/imgs/background1.jpg');
+    background-size: contain;
+    animation: flicker 1.5s infinite alternate;
+
+  }
+  @keyframes flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      3px 3px 13px #eee6;
+
+      }
+
+      20%, 24%, 55% {
+      text-shadow: none;
+      }
+      }
+  .lineStreet {
+    background: linear-gradient(to left, rgba(187, 95, 39, 0) 0%, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 70%, rgba(187, 95, 39, 0) 100%);
+    display: block;
+    height: 6px;
+    left: 0;
+    position: relative;
+    top: -31px;
+    width: 555px;
+  }
+
+  #bike-wrapper {
+    height: 108px;
+    width: 108px;
+    animation: drive 3s linear infinite;
+  }
+
+  #bike {
+    height: 24px;
+    width: 25px;
+    background-image: url("../img/motorbike.png");
+    animation-delay: 2.4s;
+  }
+
+  @keyframes drive {
+    0% {
+      margin-left: -364px;
+      opacity: 0;
+    }
+    33.33% {
+      transform: rotate(0deg);
+      margin-left: -50px;
+      opacity: 1;
+    }
+    66.66% {
+      transform: rotate(-360deg);
+      margin-left: -50px;
+      opacity: 1;
+    }
+    79% {
+      transform: rotate(-390deg);
+    }
+    100% {
+      margin-left: 264px;
+      transform: rotate(-360deg);
+      opacity: 0;
+    }
+  }
+
+
+/*==============================
+	Start Popup Window
+==============================*/
+#overlay{
+	display: none;
+}
+.wapper{
+	position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 20000;
+    justify-content: center;
+}
+.popup{
+    width: 550px;
+    height: 300px;
+    padding: 20px;
+    background: #18181d;
+    border-radius: 20px;
+    box-shadow: 0px 11px 42px #000000ad;
+}
+.popup .titlePopup{
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    color: #EEE;
+    align-items: center;
+}
+.popup textarea{
+    width: 100%;
+    height: 73%;
+    border-radius: 7px;
+    margin: auto;
+    background: none;
+    color: #EEE;
+    border: 1px solid #eeeeee29;
+}
+
+/*==============================
+	Start Alert Massage
+==============================*/
+#welcome{
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    transition: all 1s ease;
+}
+.alert{
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    z-index: 11111;
+}
+/*==============================
+	Start Alert Massage
+==============================*/
+
+
+/*==============================
+	chat Notes
+==============================*/
+#textareaChat{
+    position: absolute;
+    bottom: 0;
+    left: 17px;
+    width: 300px;
+    z-index: 1000;
+    background: #0a0c14;
+    color: #eee;
+    display: none;
+}
+#textareaChat .boxChat{
+    background-color: #EEE;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+}
+.titleChat{
+    padding: 7px 10px;
+    display: flex;
+    justify-content: space-between;
+    background: #0a0c14;
+    border-bottom: 1px solid #8a85ff17;
+}
+.boxChat textarea{
+    padding: 0 10px;
+    border: 1px solid #eeeeee00;
+    background: #0a0c14;
+    color: #eee;
+    outline: #00000000;
+}
+.boxChat #saveClose{
+    background: #0b5ed7;
+    color: #eee;
+}
+
+
+/*==============================
+	Alert
+==============================*/
+.alertStyle{
+    transform: translateX(-50%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #EEE;
+    box-shadow: var(--boxshadow);
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: 900;
+}
+#alertSuccess{
+    color: #15CD72;
+}
+#alertWrong{
+    color: #EDE04D;
+}
+#alertInfo{
+    color:#4bb1cf ;
+}
+
+#error404{
+    color: #ED4F32;
+}

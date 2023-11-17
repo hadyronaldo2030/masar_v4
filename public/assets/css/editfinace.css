@@ -1,0 +1,198 @@
+/*----------------------------------------
+Project:	System Masar Marketing
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Home
+
+
+
+
+/*==============================
+	Home
+==============================*/
+header{
+    height: 100vh;
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+/* Title Section */
+header .titleSection{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: #ab9696;
+    align-items: center;
+    margin: 6px 0;
+}
+
+
+/* View head */
+.viewHead{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Input */
+.form-control, .form-select {
+    display: block;
+    width: 185px;
+    height: 35px;
+    padding: 0.375rem 0.75rem;
+    margin-right: 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color);
+    background-color: var(--input);
+    background-clip: padding-box;
+    border: 1px solid #ced4da12;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/*==============================
+	Start Popup Window
+==============================*/
+.popupWindow {
+    background: var(--component)!important;
+    color: var(--color) !important;
+}
+.modal-header {
+    border-bottom: 1px solid #dee2e617!important;
+
+}
+.closepopup{
+    color: var(--color)!important;
+    --webkit-filter: var(--imgDark);
+}
+.modal-footer{
+    border-top: 1px solid #dee2e617!important;
+}
+.popupWindow textarea{
+    height: 150px!important;
+}
+/* Upload Invoic Image */
+.uploadImg, .uploadImgEdit{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 220px;
+    border-radius: 7px;
+    background: #3a3c48;
+}
+
+.uploadImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    border-radius: 7px;
+}
+.uploadImg input ,.uploadImgEdit input{
+    height: 100%;
+    position: relative;
+    opacity: 0;
+}
+.uploadImg span ,.uploadImgEdit span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--input);
+    color: var(--color);
+    border-radius: 10px !important;
+}
+
+/* Small image */
+.boxMinImg {
+    display: flex;
+    width: 270px;
+    overflow-x: auto;
+    margin-top: 13px;
+    border-radius: 5px;
+}
+.boxMinImg .minImg {
+    display: flex;
+    min-width: 40px;
+    height: 40px;
+    margin-right: 6px;
+    border-radius: 7px;
+    background: var(--input);
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.file-upload {
+    display: none;
+}
+.minImg label {
+    opacity: 0;
+    z-index: 1;
+}
+.minImg:hover label {
+    opacity: 1;
+}
+.boxMinImg .minImg img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    border-radius: 7px;
+}
+/* .minImg img:empty {
+    display: none;
+  } */
+.minImg .delete-button {
+    display: none;
+}
+.minImg .delete-button {
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #00000082;
+    color: #DDD;
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.minImg .delete-button:hover {
+    opacity: 1;
+}
+
+.minImg img:visible + .delete-button {
+    display: flex;
+}
+
+.btnPrimary{
+    background: rgba(67, 28, 221, 0.874);
+    color: #EEE;
+}

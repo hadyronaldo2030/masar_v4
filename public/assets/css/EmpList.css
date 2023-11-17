@@ -1,0 +1,250 @@
+/*----------------------------------------
+Project:	System Masar Marketing
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Home
+
+
+
+/*==============================
+	Home
+==============================*/
+header{
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+/* Title Section */
+header .titleSection{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: #ab9696;
+    align-items: center;
+    margin: 6px 0;
+}
+/* View Bar */
+.viewBar{
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    background: var(--component);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.viewBar .boxBar{
+    color: var(--color);
+    width: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    overflow-x: auto;
+
+}
+.boxIcon{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    color: var(--color);
+}
+.statusBar{
+    height: 40%;
+    display: flex;
+    align-items: flex-end;
+}
+.upArrow{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    border-radius: 40px;
+    background: #0d6dfd38;
+    align-items: center;
+    justify-content: center;
+}
+.opacityText{
+    font-size: 14px;
+    color: #7a7ea2d6;
+}
+.boxOrange{background: #fe7f00;}
+.boxGreen{background: #21945b;}
+.boxBlue{background: #0d6efd;}
+.boxGray{background: gray;}
+
+/* Fixed & Traning */
+.fixed , .trainig, .temporary{
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    margin: 15px;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    color: #EEE;
+}
+.fixed{background: #300dcd;}
+.trainig{background: #13cd0d;}
+.temporary{background: #0e8363;}
+/* Box Head */
+.boxHead{
+    color: var(--color);
+    width: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    overflow-x: auto;
+}
+.boxHead .search{
+    background: none;
+    color: #EEE;
+    width: 185px !important;
+    padding-left: 5px !important;
+    border: 1px solid #485b76;
+    border-radius: 10px;
+}
+.tbody {
+    border: 1px solid #eee0 !important;
+}
+.table > :not(:first-child) {
+    border-top: 2px solid #8c92b900 !important;
+}
+.tbody .tr,
+.thead .tr {
+    height: 55px;
+    background: var(--dark-light);
+    border-bottom: 7px solid var(--component);
+    color: var(--color);
+    text-align: left;
+    font-size: 14px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+/* .th {
+    text-align: center !important;
+} */
+.a {
+    display: block;
+    color: var(--color);
+    width: 100%;
+    text-align: left !important;
+}
+.tbody .tr .td {
+    color: var(--color);
+    text-align: left;
+    height: 55px;
+    font-weight: 300px !important;
+    background: var(--dark-light);
+}
+
+.tbody .tr > :first-child,
+thead .tr > :first-child {
+    border-radius: 7px 0 0 7px;
+    margin-bottom: 15px;
+}
+.tbody .tr > :last-child,
+thead .tr > :last-child {
+    border-radius: 0 7px 7px 0;
+    margin-bottom: 15px;
+}
+.table > .tbody,
+.table > thead {
+    vertical-align: middle !important;
+}
+.imgEmp {
+    height: 45px;
+    overflow: hidden;
+}
+.imgEmp img {
+    object-fit: cover;
+    border: 3px solid #b9b0ffc7;
+    width: 40px;
+    height: 45px;
+    background: #eee;
+    border-radius: 10px;
+}
+.input-icon {
+    position: relative;
+  }
+
+  .input-field {
+    width: 35px;
+    height: 30px;
+    border: rgba(226, 226, 226, 0);
+    background-color: transparent;
+    color: #eeeeee00;
+    position: absolute;
+    bottom: -15px;
+    right: 0px;
+    cursor: pointer;
+}
+
+  .input-icon i {
+    transition: all 1s ease;
+    color: #777777;
+    font-size: 16px;
+    position: absolute;
+    top: -7px;
+    right: 10px;
+}
+.input-icon:hover i{
+      color: #8bd669;
+  }
+
+.delete , .edit{
+    border-radius: 11px;
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.delete{
+    color: rgb(255, 0, 0);
+    background:#00000000;
+}
+.edit{
+    color: rgb(33, 149, 33);
+}
+
+/* =========== Page Data Entry ============ */
+.form-select{
+    width: 100%!important;
+    padding: 0px !important;
+    color: var(--color);
+    background: #0000;
+    background-color: #0000;
+    border: #0000;
+    text-align: center;
+}
+option{
+    color: #000;
+}
+.form-control{
+    width: 105px!important;
+    padding: 1px 5px;
+    margin: 0 !important;
+    background: var(--input);
+    outline: none !important;
+    border: none;
+    color: #b5b5b5 !important;
+}
+
+/* =========== Excel Sheet ============ */
+.xlsx{
+    width: 35px;
+    height: 35px;
+    background-image: url("../img/xls.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}

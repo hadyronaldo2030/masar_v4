@@ -1,0 +1,387 @@
+/*----------------------------------------
+Project:	System Masar Marketing
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Home
+
+
+
+/*==============================
+	Home
+==============================*/
+header{
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+/* Title Section */
+.titleSection{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: #ab9696;
+    align-items: center;
+    margin: 6px 0;
+}
+
+/* Filter debartment */
+select{
+    padding: 0px 7px;
+    width: 155px;
+    background-color: var(--btnGray);
+    text-align: left !important;
+    color: #EEE;
+    border: none;
+}
+
+.viewBar {
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.viewBar .boxBar {
+    color: var(--color);
+    background: var(--component);
+    height: 100px;
+    margin: 0 15px;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: var(--boxshadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.statusBar {
+    height: 40%;
+    display: flex;
+    align-items: center;
+}
+.upArrow {
+    width: 25px;
+    height: 25px;
+    border-radius: 40px;
+    background: #0d6dfd38;
+    margin-left: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.opacityText {
+    font-size: 12px;
+    color: #a7a9c3d6;
+}
+.boxBar:hover {
+    color: var(--color2);
+    background: var(--light-dark);
+}
+.boxBar h1 {
+    font-size: 3.3rem;
+}
+.boxOrange {
+    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+}
+.boxGreen {
+    background-image: linear-gradient(
+        -225deg,
+        #008442b0 0%,
+        #00c261 48%,
+        #dfffcd 100%
+    );
+}
+.boxRed {
+    background-image: linear-gradient(to top, #f12d19 0%, #fe5196 100%);
+}
+.boxBlue {
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+.boxGray {
+    background-image: linear-gradient(60deg, #29323c 0%, #fe5196 100%);
+}
+
+.textOrange {
+    color: orange;
+    font-weight: 600;
+}
+.textGreen {
+    color: green;
+    font-weight: 600;
+}
+.textRed {
+    color: red;
+    font-weight: 600;
+}
+.textBlue {
+    color: #0093e9;
+    font-weight: 600;
+}
+.textGray {
+    color: gray;
+    font-weight: 600;
+}
+
+/* Box Head */
+.boxHead {
+    color: var(--color);
+    background: var(--component);
+    box-shadow: var(--boxshadow);
+    width: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    overflow-x: auto;
+}
+.boxHead .search {
+    background: none;
+    color: #eee;
+    width: 185px !important;
+    padding-right: 5px !important;
+    border: 1px solid #485b76;
+    border-radius: 7px;
+}
+
+.tbody {
+    border: 1px solid #eee0 !important;
+}
+.table > :not(:first-child) {
+    border-top: 2px solid #8c92b900 !important;
+}
+.tbody .tr,
+.thead .tr {
+    height: 55px;
+    background: var(--dark-light);
+    border-bottom: 7px solid var(--component);
+    color: var(--color);
+    text-align: left;
+    font-size: 14px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.th {
+    text-align: center !important;
+}
+.a {
+    display: block;
+    color: var(--color);
+    width: 100%;
+    text-align: left !important;
+}
+.tbody .tr .td {
+    color: var(--color);
+    text-align: left;
+    height: 55px;
+    font-weight: 300px !important;
+    background: var(--dark-light);
+}
+
+.tbody .tr > :first-child,
+thead .tr > :first-child {
+    border-radius: 7px 0 0 7px;
+    margin-bottom: 15px;
+}
+.tbody .tr > :last-child,
+thead .tr > :last-child {
+    border-radius: 0 7px 7px 0;
+    margin-bottom: 15px;
+}
+.table > .tbody,
+.table > thead {
+    vertical-align: middle !important;
+}
+.imgEmp {
+    height: 45px;
+    overflow: hidden;
+}
+.imgEmp img {
+    object-fit: cover;
+    border: 3px solid #b9b0ffc7;
+    width: 45px;
+    height: 45px;
+    background: #eee;
+    border-radius: 10px;
+}
+.input-icon {
+    position: relative;
+}
+
+.input-field {
+    width: 35px;
+    border: rgba(226, 226, 226, 0);
+    background-color: #ffffff00;
+    color: #eeeeee00;
+    position: absolute;
+    bottom: -4px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.input-icon i {
+    transition: all 1s ease;
+    color: #777777;
+    font-size: 16px;
+    position: absolute;
+    top: -7px;
+    right: 10px;
+}
+.input-icon:hover i {
+    color: #8bd669;
+}
+
+.delete,.edit {
+    border-radius: 11px;
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.delete {
+    color: rgb(255, 0, 0);
+    background: #00000000;
+}
+.edit {
+    color: rgb(33, 149, 33);
+}
+.btn-save {
+    background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+    color: #eee;
+    height: 30px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    transition: all 5s ease;
+}
+.btn-save:hover {
+    background-image: linear-gradient(
+        to top,
+        #d5d4d0 0%,
+        #d5d4d0 1%,
+        #eeeeec 31%,
+        #efeeec 75%,
+        #e9e9e7 100%
+    );
+    color: #000;
+}
+/* =========== Page Data Entry ============ */
+.form-select {
+    width: 100% !important;
+    padding: 0px !important;
+    color: var(--color);
+    background: #0000;
+    background-color: #0000;
+    border: #0000;
+    text-align: center;
+}
+option {
+    color: #DDD;
+    margin: 10px;
+}
+.form-control {
+    width: 100px !important;
+    padding: 2px 8px;
+    /* display: inline-block !important; */
+    margin: 0 !important;
+    background: var(--input);
+    outline: none !important;
+    border: none;
+    color: #b5b5b5 !important;
+}
+
+/* List Projects */
+.section1{
+    /* min-width: 400px; */
+    width: auto;
+    max-width: 35%;
+}
+.section2{
+    width: 100%;
+    height: 80vh;
+}
+.taskList .tmImg img{
+    width: 35px;
+    height: 35px;
+    margin-left: -20px;
+    border-radius: 50px;
+}
+.taskList .tmImg > :first-child img{
+    margin-left: 0px;
+}
+.taskList table tbody tr{
+    font-size: 13px;
+}
+
+
+/* Alert Notes */
+#notes-container{
+    width: 270px;
+    min-height: 97vh;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    z-index: 111111;
+    background: var(--btnGray);
+    box-shadow: var(--boxshadow);
+    color: #EEE;
+    padding: 10px 10px 0 10px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+}
+.navNotes{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 1px solid #9f9f9f70;
+    align-items: center;
+}
+.navNotes img{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border: 6px solid var(--component);
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.209);
+}
+#notes{
+    height: 100%;
+    width: 100%;
+    padding-top: 10px;
+}
+.input-icon {
+    position: relative;
+    width: 50px;
+    margin: auto;
+  }
+
+  .input-field {
+    width: 35px;
+    border: rgba(226, 226, 226, 0);
+    background-color: #ffffff00;
+    color: #eeeeee00;
+    position: absolute;
+    bottom: -4px;
+    right: 9px;
+    cursor: pointer;
+}
+
+  .input-icon i {
+    transition: all 1s ease;
+    /* color: #777777; */
+    font-size: 16px;
+    position: absolute;
+    top: -7px;
+    right: 10px;
+}
+.input-icon:hover i{
+      color: #8bd669;
+  }

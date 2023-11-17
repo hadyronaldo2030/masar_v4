@@ -1,0 +1,355 @@
+/*----------------------------------------
+Project:	System Masar Marketing
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. header projects
+
+
+
+/*==============================
+	header projects
+==============================*/
+header{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+/* Title Section */
+header .titleSection{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: #ab9696;
+    align-items: center;
+    margin: 6px 0;
+}
+/* Input */
+.form-control{
+    display: block;
+    padding: 7px 0.75rem;
+    margin-right: 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color);
+    background-clip: padding-box;
+    background-color: var(--input) !important;
+    border: 2px solid #79899924 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 7px !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    &::placeholder {
+      opacity: 1;
+      outline: none;
+    }
+}
+/* Circle and Line Styles */
+.timeline {
+    display: flex;
+    width: 80%;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 20px auto -30px auto;
+  }
+
+  .circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+
+  }
+
+  .circle span {
+    display: inline-block;
+    transform: translateY(1px);
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .line {
+    height: 5px;
+    flex: 1;
+  }
+
+  /* Background Colors */
+.black {
+    background-image: linear-gradient(135deg, #FFA8A8 10%, black 100%);
+}
+.black span{
+    font-size: 10px !important;
+}
+
+  .black-to-orange {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.363), rgba(255, 166, 0, 0.368));
+  }
+
+  .orange {
+    background-image: linear-gradient(135deg, #FFA8A8 10%, orange 100%);
+  }
+
+  .orange-to-green {
+    background: linear-gradient(to right, rgba(255, 166, 0, 0.364), rgba(0, 136, 0, 0.364));
+  }
+
+  .green {
+    font-size: 10px;
+    background-image: linear-gradient(135deg, #FFA8A8 10%, #080 100%);
+  }
+
+  .green-to-blue {
+    background: linear-gradient(to right, rgba(0, 136, 0, 0.355), rgba(53, 39, 246, 0.366) 100%);
+  }
+
+  .blue {
+    background-image: linear-gradient(135deg, #FFA8A8 10%, rgb(52, 39, 246) 100%);
+  }
+
+  /* Column and Card Styles */
+.boxColumn{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease;
+
+}
+.column {
+    width: 100%;
+    padding: 20px 10px;
+    border: 1px solid #8f86a924;
+    border-radius: 7px;
+}
+  #newProjectColumn h4{
+      color: var(--color);
+      text-align: center;
+  }
+  #inProgressColumn h4{
+    text-align: center;
+      color: orange;
+  }
+  #reviewColumn h4{
+    text-align: center;
+      color: #419f41;
+  }
+  #completedColumn h4{
+    text-align: center;
+      color: #a6a6ff;
+  }
+ .boxColumn .card {
+    background: var(--component);
+    box-shadow: var(--boxshadow);
+    color: var(--color);
+    max-width: 270px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 20px 10px;
+    cursor:grab;
+    position: relative;
+    border-radius: 7px;
+    transition: all .5s ease;
+  }
+.boxColumn .card:active {
+    cursor: grabbing;
+    background: rgb(36, 36, 36);
+    color: #EEE;
+}
+/* button = delete , edit */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 80%;
+    padding: 4px 10px;
+    border-radius: 7px;
+    background: var(--cards);
+    box-shadow: var(--boxshadow) , inset 2px 2px 2px #caafaf29;
+    z-index: 1;
+}
+
+.show-dropdown {
+display: block;
+}
+.dropdown-button {
+    width: 10px;
+    position: absolute;
+    right: 10px;
+    background: none;
+    color: var(--color);
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease;
+    opacity: 0;
+  }
+.boxColumn .card:hover .dropdown-button {
+    opacity: 1;
+  }
+  .dropdown-button:hover {
+    color: #bebebe;
+  }
+
+  /* button delete  */
+.deleteEdit{
+    display: flex;
+    flex-direction: column;
+}
+.delete-button ,.edit-button{
+    border: 1px solid #ff272745;
+    color: #ff6262;
+    padding: 3px 15px;
+    border-radius: 5px;
+}
+.edit-button{
+    border: 1px solid #1b9d224b;
+    color: #40b646;
+}
+/* Select option */
+.progress-button{
+    font-size: 14px;
+
+}
+.progress-dropdown {
+    margin: 18px 5px;
+    background: none;
+    color: var(--color);
+    border: none;
+    font-weight: 900;
+    text-align: end;
+}
+
+.progress-dropdown option {
+color: black;
+}
+
+  /* Titel Card */
+.boxColumn h5{
+    color: #938e8e;
+    font-weight: 700;
+    font-size: 18px;
+}
+.boxColumn h5::before{
+    content: "project Name : ";
+}
+.boxColumn .department{
+    font-size: 14px;
+    color: #ffffff;
+    padding: 1px 5px;
+    height: 22px;
+    border-radius: 5px;
+}
+#newProjectColumn,#inProgressColumn,#reviewColumn,#completedColumn{
+    background: var(--component);
+    border-radius: 5px;
+}
+
+#newProjectColumn .department{background-color: #442d2d;}
+#inProgressColumn .department, #inProgressColumn .progress-bar{background-color: rgb(214, 139, 0);}
+#reviewColumn .department, #reviewColumn .progress-bar{background-color: #419f41;}
+#completedColumn .department, #completedColumn .progress-bar{background-color: #6a6aff;}
+.boxColumn .show-read-more .more-text{
+    display: none;
+}
+  .progress-bar {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .progress {
+    display: flex;
+    height: 7px;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #ededed;
+    border-radius: 0.25rem;
+  }
+
+  .card-tick {
+    font-family: 'Material Icons Outlined';
+    font-size: 16px;
+    color: #EEE;
+    display: none;
+  }
+
+/* Read More */
+.show-read-more{
+    font-size: 14px;
+}
+.show-read-more .more-text{
+  display: none;
+}
+.read-more-link{
+    color: #938e8e;
+}
+/* Img TEam */
+.boxTm{
+    display: flex;
+    height: 55px;
+    margin-top: 15px;
+}
+.imgTM{
+    width: 220px;
+    height: 75px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    cursor: pointer;
+}
+.imgTM .personTm{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 -25px 0 5px;
+    transition: all .5s ease;
+}
+.imgTM .personTm img{
+    width: 35px;
+    height: 35px;
+    backdrop-filter: invert(1);
+    border-radius: 40px;
+    box-shadow: 0px 4px 8px #dddddd3d;
+    border-right: 1px solid #ffffffa8;
+}
+.imgTM .personTm span{
+    width: 0px;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+
+}
+.imgTM:hover .personTm{
+    margin: 0 5px;
+}
+.imgTM:hover .personTm span{
+    width: 120px;
+    opacity: 1;
+}
+
+/* select progress */
+form .progress-dropdown{
+    width: 100%;
+    border: none;
+    background: var(--input);
+    color: var(--color);
+}
+
+/* Document */
+.document img{
+    height: 35px;
+    margin: 20px 0;
+}

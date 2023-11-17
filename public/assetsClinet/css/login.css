@@ -1,0 +1,101 @@
+/*----------------------------------------
+Project:	System Masar Marketing
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Login
+
+
+
+/*==============================
+	Login
+==============================*/
+
+.loginMasar{
+    width: 55%;
+    height: auto;
+    margin: 70px auto 200px;
+    transition: all 2s ease;
+    text-shadow: 5px 2px 10px #d2acffa3;
+    font-weight: 800;
+}
+p, button {color: var(--color);}
+.line{
+    display: inline-block;
+    border: 1px solid var(--color);
+    width: 70%;
+    box-shadow: 5px 2px 10px #d2acffa3;
+}
+.top-line{
+    font-size: 25px;
+    color: #EEE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.loginMasar img{
+    width: 100%;
+    display: block;
+    filter: var(--imgLight);
+}
+
+
+/* form */
+.login{
+	width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.login .loginForm{
+	width: 55%;
+    height: auto;
+	display: flex;
+	justify-content: space-between;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+
+.login .boxInput{
+    width: 270px;
+    padding: 0!important;
+    margin: 0!important;
+}
+.login input{
+    background: none !important;
+	color: var(--color) !important;
+    background: var(--input) !important;
+    padding: 0 0 0 5px !important;
+    height: 35px !important;
+    display: flex;
+    align-items: center;
+	border: 1px solid #cccccca7;
+}
+.login input::placeholder ,.login label{
+	color: #EEE !important;
+}
+
+
+/* Start button */
+.btnLogin{
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+}
+.btnLogin .login{
+    background: none;
+    border: 1px solid #cccccc9a;
+    border-radius: 50px;
+    padding: 8px 0px;
+    font-size: 20px;
+    width: 150px;
+    margin: auto;
+    transition: all 0.2s ease;
+}
+.btnLogin .login:hover{
+    background: #fefefe;
+    border: none;
+}

@@ -1,0 +1,147 @@
+/*----------------------------------------
+Project:	System Masar Marketing
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Home
+
+
+
+/*==============================
+	Home
+==============================*/
+header{
+    margin-top: 40px;
+}
+header .boxSection{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+}
+header .boxSection button{
+	width: 270px;
+    height: 270px;
+    border-radius: 10px;
+    background-image: var(--cards);
+    color: var(--color);
+    box-shadow: var(--boxshadow);
+    padding: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+}
+.btnCards {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+	transition: all .5s ease;
+  }
+ .btnCards:hover {
+    background-color: #252b33;
+    color: white;
+    transform: scale(1.1);
+    text-shadow: 5px 2px 10px #d2acffa3;
+    border: 1px solid #7ab8fd9c;
+
+  }
+h5{
+    font-weight: 700;
+    color: var(--color);
+}
+
+.timeline{
+	display: flex;
+    border-right: 2px solid #ccc;
+    height: 130px;
+    width: 0px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.timeline li{
+    margin-left: -7px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    color: rgb(97 157 255);
+}
+.timeline .dotsTop{
+	margin-top: -7px;
+}
+.timeline .dotsBottom{
+	margin-bottom: -7px;
+}
+.timeline li svg{
+	margin-right: 15px;
+    text-shadow: 5px 2px 10px #d2acffa3;
+}
+
+/* details cards */
+.detailsCards{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center!important;
+}
+.tabcontent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center!important;
+    text-align: center;
+}
+.iconImg{
+	width: 40px;
+}
+.detailsCards h4{
+    font-size: 50px;
+    font-weight: 900;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: var(--backgroundText);
+    background-size: contain;
+    font-family: 'Oswald';
+    text-align: center!important;
+    text-transform: uppercase;
+}
+/* Btn Section */
+.boxBtnSection{
+    display: flex;
+    justify-content: center!important;
+    margin-top: 30px;
+    padding: 15px 0;
+    height: 130px;
+    overflow: hidden;
+}
+.boxBtnSection .btnSection{
+	min-width: 120px;
+    height: 55px;
+    display: flex;
+    margin: 0 30px;
+    background-image: var(--cards);
+    color: var(--color);
+    box-shadow: var(--boxshadow);
+    transition: all .5s ease;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: flex-end;
+}
+.boxBtnSection .btnSection:hover{
+    background-color: #252b33;
+    box-shadow: inset 3px 3px 6px #fcffa749;
+    text-shadow: 5px 2px 10px #d2acffa3;
+}
+.boxBtnSection .btnSection p{
+    color: var(--color);
+    font-size: 18px;
+    padding: 0 10px
+}

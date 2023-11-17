@@ -1,0 +1,579 @@
+/*----------------------------------------
+Project:	System Masar Marketing
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Home
+
+
+
+
+/*==============================
+	Home
+==============================*/
+.body {
+    overflow-y: hidden !important;
+    border-radius: 15px!important;
+}
+header{
+    height: 100vh;
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+/* Title Section */
+header .titleSection{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: #ab9696;
+    align-items: center;
+    margin: 6px 0;
+}
+
+
+/* View head */
+.viewHead{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Nav Setails */
+.navcontent{
+    width: 100%;
+    height: 100%;
+    color: var(--color);
+    background: var(--component);
+    border-radius: 20px;
+}
+.nav-tabs{
+    padding-left: 17px;
+    margin-bottom: 30px !important;
+    border-bottom: 1px solid #dee2e600!important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+    color: var(--color);
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: #eeeeee00;
+    border-radius: 0 0 7px 7px;
+    background: rgba(184, 184, 184, 0.136)000;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: var(--color);
+    background-color: var(--dark-light);
+    border-radius: 0 0 7px 7px;
+    box-shadow: inset 0px -2px 3px -1px #00000066;
+    border-color: #dee2e600 #dee2e600 #ffffff00;
+}
+/* Input */
+.form-control, .form-select {
+    display: block;
+    width: 185px;
+    height: 35px;
+    padding: 0.375rem 0.75rem;
+    margin-right: 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color);
+    background-color: var(--input);
+    background-clip: padding-box;
+    border: 1px solid #ced4da12;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* Add Item */
+.addItem{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    display: flex;
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+    color: #EEE;
+    box-shadow: 1px 4px 4px #0000009e;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.addItem:hover{
+    background-color: #e4490ccd;
+    transform: scale(1.1);
+}
+/* Table */
+.tab-pane table{
+    width: 75%;
+    margin-left: 10px;
+}
+tbody tr{
+    color: var(--color);
+    height: 70px;
+}
+tbody td{
+    height: 70px;
+}
+
+/* Reset */
+.invoice{
+    height: 100%;
+    border-radius: 5px;
+}
+/* Action */
+.bg-none{
+    background-color: #00000000;
+    border: none;
+}
+.delete , .edit{
+    border-radius: 5px;
+    display: inline-flex;
+    width: auto;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease;
+    font-size: 16px;
+    padding: 4px;
+}
+.delete button:hover, .edit button:hover{
+   color: #EEE!important;
+}
+
+.delete{
+    color: rgb(255, 0, 0);
+    background:#00000000;
+}
+.edit{
+    color: rgb(33, 149, 33);
+    background:#00000000;
+}
+#myCheckbox{
+    height: 16px !important;
+    width: 16px !important;
+}
+  /* Filter Date Time */
+  .inputFilter{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: -24px;
+  }
+.filterdate {
+    padding: 0 15px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+
+}
+.filterdate input{
+    background: #00000000;
+    color: #EEE;
+    text-align: center;
+    border: 1px solid #a5a5a54d;
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+/* Item Month */
+.boxItem{
+    margin-top: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 260px;
+}
+.detailsMonth{
+    width: 98% !important;
+    height: 67px !important;
+    color: var(--color);
+    text-align: center;
+    margin: 10px auto;
+    padding: 7px;
+
+}
+.detailsMonth  tr{
+    border-bottom: 10px solid var(--dark-light);
+    height: 50px;
+}
+.detailsMonth  td{
+    padding: 7px 0 !important;
+}
+.detailsMonth .absence{
+    color: #4354ff;
+    /* box-shadow: inset 1px 1px 6px rgb(88 105 255 / 57%), 1px 6px 7px rgb(0 0 0 / 33%); */
+}
+.detailsMonth .presence{
+    color: #ff1414;
+    /* box-shadow: inset 1px 1px 6px rgba(255, 0, 0, 0.57), 1px 6px 7px rgb(0 0 0 / 33%); */
+}
+.detailsMonth .holiday{
+    color: rgb(58, 175, 40);
+    /* box-shadow: inset 1px 1px 6px rgb(58 175 40 / 57%), 1px 6px 7px rgb(0 0 0 / 33%); */
+}
+
+.detailsMonth .notes{
+    color: #fcc729;
+    /* box-shadow: inset 1px 1px 6px rgb(58 175 40 / 57%), 1px 6px 7px rgb(0 0 0 / 33%); */
+}
+/* Accordion */
+.btnAccordion {
+    border-radius: 7px;
+    color: var(--color);
+    background: #999aa03b;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.panel {
+    margin: auto;
+    width: 320px;
+    border-radius: 7px;
+    position: absolute;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background: #ff2323c1;
+    color: #efffe7;
+}
+/* Alert Notes */
+#notes-container{
+    width: 270px;
+    min-height: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    z-index: 111111;
+    background: var(--light-dark);
+    color: var(--color2);
+    padding: 10px 10px 0 10px;
+    border-left: 4px solid cornflowerblue;
+    border-radius: 7px;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.navNotes{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+.navNotes img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.209);
+}
+#notes{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+/*==============================
+	Start Popup Window
+==============================*/
+.popupWindow {
+    background: var(--component)!important;
+    color: var(--color) !important;
+}
+.modal-header {
+    border-bottom: 1px solid #dee2e617!important;
+
+}
+.closepopup{
+    color: var(--color)!important;
+    -webkit-filter: var(--imgDark);
+}
+.modal-footer{
+    border-top: 1px solid #dee2e617!important;
+}
+.popupWindow textarea{
+    height: 150px!important;
+}
+/* Upload Invoic Image */
+.uploadImg, .uploadImgEdit{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 220px;
+    border-radius: 7px;
+    background: #3a3c48;
+}
+
+.uploadImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    border-radius: 7px;
+}
+.uploadImg input ,.uploadImgEdit input{
+    height: 100%;
+    position: relative;
+    opacity: 0;
+}
+.uploadImg span ,.uploadImgEdit span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--input);
+    color: var(--color);
+    border-radius: 10px !important;
+}
+
+/* Small image */
+.boxMinImg {
+    display: flex;
+    width: 180px;
+    overflow-x: auto;
+    margin-top: 13px;
+    border-radius: 5px;
+}
+.boxMinImg .minImg {
+    display: flex;
+    min-width: 40px;
+    height: 40px;
+    margin-right: 6px;
+    border-radius: 7px;
+    background: var(--input);
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.file-upload {
+    display: none;
+}
+.boxMinImg .minImg img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    border-radius: 7px;
+}
+.minImg img:empty {
+    display: none;
+  }
+.minImg .delete-button {
+    display: none;
+}
+.minImg .delete-button {
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #00000082;
+    color: #DDD;
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.minImg .delete-button:hover {
+    opacity: 1;
+}
+
+.minImg img:visible + .delete-button {
+    display: flex;
+}
+
+
+
+/* Alert Notes */
+#notes-container{
+    width: 270px;
+    min-height: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    z-index: 111111;
+    background: var(--light-dark);
+    color: var(--color2);
+    padding: 10px 10px 0 10px;
+    border-left: 4px solid cornflowerblue;
+    border-radius: 7px;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.navNotes{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+.navNotes img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.209);
+}
+#notes{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+/* Gallery */
+.iconImg a img{
+    height: 40px;
+}
+
+  /* Cards */
+.sectionCard{
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        height: 400px;
+        padding: 18px 0 10px 5px;
+}
+.boxCards{
+    position: relative;
+    width: 200px;
+    height: 320px;
+    transition: all .5s ease;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 20px 20px 0;
+}
+
+.reservedService, .monthlyContracts{background-image: linear-gradient(-20deg, blue 0%, #21d4fd 100%);}
+.weeklyContracts, .threeMonthContracts{background-image: linear-gradient(to right, red 0%, #f9d423 100%);}
+.consultation, .SemiSecondaryContracts{background-image: linear-gradient(-20deg, gray 0%, #21d4fd 100%);}
+.SecondaryContracts{background-image: linear-gradient(-20deg, orange 0%, #21d4fd 100%);}
+.consultation{background-image: linear-gradient(-20deg, black 0%, #21d4fd 100%);}
+
+.boxCards .front, .boxCards .back{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    backface-visibility: hidden;
+    display: flex;
+    background-image: var(--cards);
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 0 10px;
+    box-shadow: 3px 3px 4px #00000040;
+}
+.boxCards:hover{
+    transform: scale(1.1);
+}
+.boxCards .back {
+    transform: rotateY(180deg);
+}
+.boxCards.showInfo .back {
+    transform: rotateY(0deg);
+}
+.boxCards.showInfo .front {
+    transform: rotateY(-180deg);
+}
+.numCard{
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 5px solid var(--component);
+    color: var(--color);
+    font-size: 19px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 5px 2px 10px #d2acffa3;
+}
+.line{
+    width: 100px;
+    height: 2px;
+    background: #b3b2a0;
+    margin: 12px 0 0 50px;
+    box-shadow: inset 5px 2px 10px #d2acffa3;
+}
+.contentCard{
+    height: 100%;
+    display: flex!important;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 14px;
+}
+.contentCard .textgallery{
+    background: #1e060614;
+    width: fit-content;
+    padding: 1px 5px;
+    border-radius: 4px;
+}
+.back .contentCard {
+    overflow-y: auto;
+    margin: 14px 0;
+}
+.front h6{
+    margin-top: 20px;
+    text-shadow: 5px 2px 10px #d2acffa3;
+    font-weight: 700;
+}
+.cost{
+    font-weight: 600;
+}
+.clientCost .text-warning{
+    font-weight: 700;
+}
+/* Status */
+#statusSpan{
+    position: relative;
+    color: #EEE;
+    border-radius: 4px;
+    padding: 1px 7px;
+    display: inline-block;
+}
+.bgGray{background-color: gray;}
+.btnPrimary{
+    background: rgba(67, 28, 221, 0.874);
+    color: #EEE;
+}
+.iconActive{
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    width: 12px;
+    height: 12px;
+    background: #c9dc23;
+    border-radius: 50px;
+    border: 2px solid #eee;
+}
+.clientName p{
+    margin-top: 15px;
+}

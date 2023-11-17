@@ -1,0 +1,104 @@
+/*----------------------------------------
+Project:	System Masar Marketing
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Home
+
+
+/*==============================
+	Home
+==============================*/
+header{
+    height: 100vh;
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+/* Title Section */
+header .titleSection{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: #ab9696;
+    align-items: center;
+    margin: 6px 0;
+}
+
+/* View Bar */
+.viewBar{
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.viewBar .boxBar {
+    color: var(--color);
+    background: var(--component);
+    height: 130px;
+    margin: 0 15px;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 3px 3px 6px #00000049;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boxIcon{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.statusBar{
+    height: 40%;
+    display: flex;
+    align-items: flex-end;
+}
+.upArrow{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    border-radius: 40px;
+    background: #0d6dfd38;
+    align-items: center;
+    justify-content: center;
+}
+.opacityText{
+    font-size: 14px;
+    color: #7a7ea2d6;
+}
+.boxOrange{color: #fe7f00;}
+.boxGreen{color: #21945b;}
+.boxBlue{color: #0d6efd;}
+.boxGray{color: gray;}
+
+/* Box Head */
+.viewplan {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.boxHead{
+    color: var(--color);
+    background: var(--component);
+    height: 100%;
+    width: 50%;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 3px 3px 6px #00000049;
+}
+.viewplan .totalEmp{
+    margin-right: 27px;
+}
+/* Chart */
